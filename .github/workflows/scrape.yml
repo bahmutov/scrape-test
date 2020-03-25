@@ -1,0 +1,10 @@
+name: scrape
+on: push
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out code 🛎
+        uses: actions/checkout@v2
+    # running the next step in specific container
+    # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontainer
