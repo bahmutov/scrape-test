@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: check out code 🛎
         uses: actions/checkout@v2
+      - run: echo $PWD
       - run: ls -la
       - name: scrape the site 🧽
         run: pipenv run python -m src.index
