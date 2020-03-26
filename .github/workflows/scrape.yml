@@ -11,5 +11,7 @@ jobs:
         uses: actions/checkout@v2
       - run: echo $PWD
       - run: ls -la
+        working-directory: /root
       - name: scrape the site 🧽
         run: pipenv run python -m src.index
+        working-directory: /root
