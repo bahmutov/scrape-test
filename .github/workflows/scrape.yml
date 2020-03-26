@@ -3,11 +3,12 @@ on: push
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    # running the next step in specific container
+    # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontainer
     container: algolia/docsearch-scraper:v1.6.0
     steps:
       - name: check out code 🛎
         uses: actions/checkout@v2
-      # running the next step in specific container
-      # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontainer
+      - run: ls -la
       - name: scrape the site 🧽
         run: pipenv run python -m src.index
