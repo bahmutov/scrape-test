@@ -8,4 +8,4 @@ jobs:
         uses: actions/checkout@v2
       - name: scrape the site 🧽
         run: |
-          docker run -it algolia/docsearch-scraper:v1.6.0
+          docker run algolia/docsearch-scraper:v1.6.0
